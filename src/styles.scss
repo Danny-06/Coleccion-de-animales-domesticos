@@ -1,1 +1,87 @@
 /* You can add global styles to this file, and also import other style files */
+
+:not(:defined) {
+  display: block;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+:root {
+  --fit-content: fit-content;
+}
+
+@supports (width: -moz-fit-content) {
+  :root {
+    --fit-content: -moz-fit-content;
+  }
+}
+
+:root {
+  --true: initial;
+  --false: ;
+
+  --light: var(--false);
+  --dark: var(--true);
+}
+
+// @media (prefers-color-scheme: light) {
+//   :root {
+//     --light: var(--true);
+//     --dark: var(--false);
+//   }
+// }
+
+@media print {
+  :root {
+    --light: var(--false);
+    --dark: var(--true);
+  }
+}
+
+
+
+html, body {
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  background-color: #111;
+  font-family: Arial;
+
+  user-select: none;
+
+  overflow: hidden;
+}
+
+app-root {
+  width: 100%;
+  height: 100%;
+
+  padding: 1rem;
+
+  overflow: auto;
+}
+
+
+td,
+details, summary,
+span, a,
+blockquote, q, cite,
+li, dt, dd,
+dfn,
+ruby,
+abbr,
+bdi, bdo,
+data, time,
+figcaption,
+p, h1, h2, h3, h4, h5, h6,
+u, s,
+samp,
+b, strong, i, em, mark, small, ins, del, sub, sup,
+pre, code, var, kbd {
+  user-select: text;
+}
