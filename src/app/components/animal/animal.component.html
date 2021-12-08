@@ -1,0 +1,9 @@
+<div id="animal-container">
+    <div class="animal-card">
+        <div class="animal-name">{{ animal.name }}</div>
+        <div class="animal-thumbnail">
+            <img class="animal-image" [src]="'assets/animals/' + animal.imageName" [alt]="animal.name" [style]="animal.imageStyle">
+        </div>
+    </div>
+    <div class="animal-description">{{ animal.description }}</div>
+</div>

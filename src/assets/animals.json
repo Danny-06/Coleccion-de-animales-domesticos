@@ -1,0 +1,147 @@
+[
+  {
+    "id": 0,
+    "type": "cat",
+    "name": "Buddy",
+    "shortDescription": "",
+    "description": "",
+    "imageName": "cat1.jpg"
+  },
+  {
+    "id": 1,
+    "type": "cat",
+    "name": "Felix",
+    "shortDescription": "",
+    "description": "",
+    "imageName": "cat2.webp"
+  },
+  {
+    "id": 2,
+    "type": "cat",
+    "name": "Jax",
+    "shortDescription": "",
+    "description": "",
+    "imageName": "cat3.jpg"
+  },
+  {
+    "id": 3,
+    "type": "cat",
+    "name": "Cooper",
+    "shortDescription": "",
+    "description": "",
+    "imageName": "cat4.webp"
+  },
+  {
+    "id": 4,
+    "type": "cat",
+    "name": "Jax",
+    "shortDescription": "",
+    "description": "",
+    "imageName": "cat5.png"
+  },
+  {
+    "id": 5,
+    "type": "cat",
+    "name": "Cooper",
+    "shortDescription": "",
+    "description": "",
+    "imageName": "cat6.webp"
+  },
+  {
+    "id": 6,
+    "type": "dog",
+    "name": "Bandit",
+    "shortDescription": "",
+    "description": "",
+    "imageName": "dog1.jpg"
+  },
+  {
+    "id": 7,
+    "type": "dog",
+    "name": "Ace",
+    "shortDescription": "",
+    "description": "",
+    "imageName": "dog2.jpg"
+  },
+  {
+    "id": 8,
+    "type": "dog",
+    "name": "Simba",
+    "shortDescription": "",
+    "description": "",
+    "imageName": "dog3.jpg"
+  },
+  {
+    "id": 9,
+    "type": "dog",
+    "name": "Thor",
+    "shortDescription": "",
+    "description": "",
+    "imageName": "dog4.png"
+  },
+  {
+    "id": 10,
+    "type": "dog",
+    "name": "Leo",
+    "shortDescription": "",
+    "description": "",
+    "imageName": "dog5.jpg"
+  },
+  {
+    "id": 11,
+    "type": "dog",
+    "name": "Buster",
+    "shortDescription": "",
+    "description": "",
+    "imageName": "dog6.jpg"
+  },
+  {
+    "id": 12,
+    "type": "parrot",
+    "name": "Sperry",
+    "shortDescription": "",
+    "description": "",
+    "imageName": "parrot1.jpg"
+  },
+  {
+    "id": 13,
+    "type": "parrot",
+    "name": "Ringo",
+    "shortDescription": "",
+    "description": "",
+    "imageName": "parrot2.jpg",
+    "imageStyle": "object-position: left;"
+  },
+  {
+    "id": 14,
+    "type": "parrot",
+    "name": "Pearly",
+    "shortDescription": "",
+    "description": "",
+    "imageName": "parrot3.webp"
+  },
+  {
+    "id": 15,
+    "type": "parrot",
+    "name": "Zizzi",
+    "shortDescription": "",
+    "description": "",
+    "imageName": "parrot4.jpg"
+  },
+  {
+    "id": 16,
+    "type": "parrot",
+    "name": "Gigsy",
+    "shortDescription": "",
+    "description": "",
+    "imageName": "parrot5.jpg"
+  },
+  {
+    "id": 17,
+    "type": "parrot",
+    "name": "Chaos",
+    "shortDescription": "",
+    "description": "",
+    "imageName": "parrot6.jpg"
+  }
+]
