@@ -22,6 +22,11 @@ export class UserService {
     })
   }
 
+  async getUser(id: number): Promise<User> {
+    const users = await this.getUsersFromStorage()
+    return users.filter(user => user.id === id)[0]
+  }
+
 
   async getUsersFromStorage(): Promise<User[]> {
     const storageResult = await Storage.get({key: 'users'})

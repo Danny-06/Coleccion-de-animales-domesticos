@@ -31,7 +31,8 @@ router-outlet {
 
 
 
-app-main, app-animal, app-user, app-add-user, app-edit-user {
+app-main, app-animal, app-user, app-add-user, app-edit-user, app-user-details, app-add-favorite-animal {
+  position: relative;
   flex-grow: 1;
   padding: 1rem;
 

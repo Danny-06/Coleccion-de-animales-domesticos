@@ -26,6 +26,8 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 // Library to fix shadow dom issue with some PrimeNg components
 // https://github.com/maitrungduc1410/primeng-shadowdom-directives
 import { PrimeNGShadowDOMDirective } from 'primeng-shadowdom-directives';
+import { UserDetailsComponent } from './components/user-details/user-details.component';
+import { AddFavoriteAnimalComponent } from './components/add-favorite-animal/add-favorite-animal.component';
 
 
 @NgModule({
@@ -36,6 +38,8 @@ import { PrimeNGShadowDOMDirective } from 'primeng-shadowdom-directives';
     UserComponent,
     AddUserComponent,
     EditUserComponent,
+    UserDetailsComponent,
+    AddFavoriteAnimalComponent,
   ],
   imports: [
     BrowserModule,

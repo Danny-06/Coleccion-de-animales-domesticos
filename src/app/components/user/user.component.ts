@@ -36,7 +36,7 @@ export class UserComponent implements OnInit {
   }
 
   goToUser(id: number) {
-
+    this.router.navigateByUrl(`/user/${id}`)
   }
 
   async editUser(id: number) {

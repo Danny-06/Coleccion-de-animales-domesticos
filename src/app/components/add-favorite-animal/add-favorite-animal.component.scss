@@ -115,8 +115,11 @@ p-dropdown .p-dropdown {
   padding: 0.3em 0.5em;
 }
 
-.favorite {
-
+.animal-card.favorite {
+  box-shadow:
+  2px 2px 0.7em 0.3em #a9b314d1,
+  inset -4px -4px 5px 0px #111c
+  ;
 }
 
 .type {
