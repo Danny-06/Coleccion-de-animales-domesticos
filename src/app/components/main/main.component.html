@@ -1,3 +1,14 @@
+<!-- Import PrimeNg stylesheet inside component -->
+<link rel="stylesheet" href="/styles.css">
+
+<p-dropdown
+    psdDropdown
+    [options]="filterOptions"
+    [(ngModel)]="filterSelected"
+    (change)="filterAnimals()"
+    optionLabel="Filter Animal"
+></p-dropdown>
+
 <div id="animals-list">
     <div class="animal-card" *ngFor="let animal of animals" (click)="navigateToAnimal(animal.id)">
         <div class="card-header">

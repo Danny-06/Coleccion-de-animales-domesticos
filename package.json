@@ -19,6 +19,9 @@
     "@angular/platform-browser-dynamic": "~12.2.0",
     "@angular/router": "~12.2.0",
     "@capacitor/storage": "^1.2.3",
+    "primeicons": "^5.0.0",
+    "primeng": "^13.0.2",
+    "primeng-shadowdom-directives": "^0.0.5",
     "rxjs": "~6.6.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.11.4"

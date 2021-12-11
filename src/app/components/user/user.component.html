@@ -1,1 +1,27 @@
-<p>user works!</p>
+<!-- Import Font Awesome -->
+<link rel="stylesheet" href="/assets/css/fontawesome/free-v4-font-face.min.css">
+
+
+<div id="user-list" *ngIf="users.length; else usersEmpty">
+    <div class="user-li" *ngFor="let user of users">
+        <div class="header" (click)="goToUser(user.id)">
+            <img class="user-icon" src="assets/user-icon.png" alt="user picture">
+            <div class="user-name">{{ user.name }}</div>
+        </div>
+        <div class="body">
+            <span class="edit  fa fa-pencil" (click)="editUser(user.id)"></span>
+            <span class="delete fa fa-trash" (click)="deleteUser(user.id)"></span>
+        </div>
+    </div>
+</div>
+
+<ng-template #usersEmpty>
+    <div id="no-users">
+        <div>There's no users yet.</div>
+        <div>Create a new user and select his favorite animals</div>
+    </div>
+</ng-template>
+
+<div class="overlay">
+    <div class="btn add-user" (click)="goToAddUser()">+</div>
+</div>
