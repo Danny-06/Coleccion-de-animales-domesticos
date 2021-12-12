@@ -11,9 +11,9 @@ podrás ver su nombre, el tipo de animal que es y una descripción detallada de 
 
 ![image](https://user-images.githubusercontent.com/72435753/145718170-ad670f89-30b9-4aee-a7e0-c5735e95be86.png)
 
-![image](https://user-images.githubusercontent.com/72435753/145718176-356cf2ad-ec5c-434d-be28-a818b52a87cf.png)
-
 ![image](https://user-images.githubusercontent.com/72435753/145718260-3e40cd23-3139-4ba5-9192-e48b2b0b89d2.png)
+
+![image](https://user-images.githubusercontent.com/72435753/145718176-356cf2ad-ec5c-434d-be28-a818b52a87cf.png)
 
 ![image](https://user-images.githubusercontent.com/72435753/145718243-edafb3f7-0b33-4093-b70e-562816aeea6e.png)
 
