@@ -60,7 +60,7 @@ export class AddFavoriteAnimalComponent implements OnInit {
     const id = this.activatedRoute.snapshot.paramMap.get('id')
     if (!id) throw new Error(`Id couldn't be found`)
 
-    this.user = await this.userService.getUser(+id)
+    this.user = await this.userService.getUserFromStorage(+id)
 
 
     const animals = await this.animalService.loadAnimals()
@@ -78,7 +78,7 @@ export class AddFavoriteAnimalComponent implements OnInit {
   toggleFavoriteAnimal(id: number) {
     const {favoriteAnimals} = this.user
     if (favoriteAnimals.includes(id)) this.user.favoriteAnimals = favoriteAnimals.filter(idA => idA !== id)
-    else this.user.favoriteAnimals.push(id)
+    else favoriteAnimals.push(id)
 
     this.userService.updateUserFromStorage(this.user)
   }

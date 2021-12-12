@@ -16,7 +16,6 @@ export class EditUserComponent implements OnInit {
   root = this.element.nativeElement
   host = this.root.shadowRoot
 
-  users: User[] = []
   user: User = {id: 0, name: '', details: '', favoriteAnimals: []}
 
   constructor(private userService: UserService, private router: Router, private activatedRoute: ActivatedRoute, private element: ElementRef,  private req: RequestService) {}
@@ -30,9 +29,8 @@ export class EditUserComponent implements OnInit {
     const id = this.activatedRoute.snapshot.paramMap.get('id')
 
     if (!id) return console.log(`Id wasn't found`)
-
-    this.users = await this.userService.getUsersFromStorage();
-    [this.user] = this.users.filter(u => u.id === +id)
+    
+    this.user = await this.userService.getUserFromStorage(+id)
 
   }
 

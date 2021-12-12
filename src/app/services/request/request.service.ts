@@ -9,13 +9,6 @@ export class RequestService {
   constructor(private http: HttpClient) {}
 
 
-  async getFileAsText(path: string): Promise<string> {
-    const text = await this.http.get(path, {responseType: 'text'}).toPromise()
-    .catch(obj => console.error(obj.error.error)) ?? ''
-
-    return text
-  }
-
   textToCSSModule(cssText: string) {
     const stylesheet: any = new CSSStyleSheet()
     stylesheet.replace(cssText)
@@ -24,7 +17,7 @@ export class RequestService {
   }
 
   async getCSSModule(path: string) {
-    const cssText = await this.getFileAsText(path)
+    const cssText = await this.fetch(path, 'text') as string
     return this.textToCSSModule(cssText)
   }
 
@@ -35,6 +28,10 @@ export class RequestService {
   async loadAndAttachCSSModuleToHost(host: any, cssPath: string) {
     const cssModule = await this.getCSSModule(cssPath)
     this.attatchCSSModuleToHost(host, cssModule)
+  }
+
+  async fetch(path: string, responseType: any = 'blob'): Promise<string | Blob | ArrayBuffer | object | []> {
+    return this.http.get(path, {responseType}).toPromise()
   }
 
 }

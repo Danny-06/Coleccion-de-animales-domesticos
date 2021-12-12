@@ -17,13 +17,11 @@
         <div class="card-header">
             <img [src]="animal.imageName ? 'assets/animals/' + animal.imageName : ''" [alt]="animal.name" [style]="animal.imageStyle">
         </div>
-        <div class="card-body">
-            <div class="card-info">{{ animal.shortDescription }}</div>
-            <div class="properties">
-                <div class="name">{{ animal.name }}</div>
-                <div class="favorite" *ngIf="isFavoriteAnimal(animal.id)">⭐</div>
-                <div class="type">{{ animalIcons[animal.type] }}</div>
-            </div>
+        <div class="card-info">{{ animal.shortDescription }}</div>
+        <div class="properties">
+            <div class="name">{{ animal.name }}</div>
+            <div class="favorite" *ngIf="isFavoriteAnimal(animal.id)">⭐</div>
+            <div class="type">{{ animalIcons[animal.type] }}</div>
         </div>
     </div>
 </div>

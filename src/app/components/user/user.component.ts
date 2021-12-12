@@ -28,7 +28,10 @@ export class UserComponent implements OnInit {
     const {defaultCSSPath} = AppComponent
     this.req.loadAndAttachCSSModuleToHost(this.host, defaultCSSPath)
 
-    this.users = await this.userService.getUsersFromStorage()
+    const users = await this.userService.getUsersFromStorage()
+
+    if (users.length === 0) this.users = await this.userService.loadDefaultUsersFromJSON()
+    else this.users = users
   }
 
   async goToAddUser() {

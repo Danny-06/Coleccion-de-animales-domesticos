@@ -1,3 +1,4 @@
+import { RequestService } from './../request/request.service';
 import { User } from './../../classes/user/user';
 import { Injectable } from '@angular/core';
 import { Storage } from '@capacitor/storage';
@@ -8,7 +9,7 @@ import { Storage } from '@capacitor/storage';
 
 export class UserService {
 
-  constructor() {}
+  constructor(private req: RequestService) {}
 
   async addUserToStorage(user: User) {
     const users = await this.getUsersFromStorage()
@@ -22,7 +23,7 @@ export class UserService {
     })
   }
 
-  async getUser(id: number): Promise<User> {
+  async getUserFromStorage(id: number): Promise<User> {
     const users = await this.getUsersFromStorage()
     return users.filter(user => user.id === id)[0]
   }
@@ -32,6 +33,17 @@ export class UserService {
     const storageResult = await Storage.get({key: 'users'})
     const usersStringify = storageResult.value ?? '[]'
     const users = JSON.parse(usersStringify)
+
+    return users
+  }
+
+  async loadDefaultUsersFromJSON(): Promise<User[]> {
+    const users = await this.req.fetch('assets/default-users.json', 'json') as User[]
+    const usersStringify = JSON.stringify(users)
+    await Storage.set({
+      key: 'users',
+      value: usersStringify
+    })
 
     return users
   }

@@ -57,7 +57,7 @@
 
 .animal-description {
   text-align: center;
-  width: 20rem;
+  width: 23rem;
 
   border-radius: 1em;
   background-color: #3a2652;
@@ -67,7 +67,9 @@
   0.4em 0.4em 0.5em 0em #0009
   ;
 
-  padding: 1em;
+  padding: 2em;
 
   overflow: auto;
+
+  line-height: 1.3;
 }
