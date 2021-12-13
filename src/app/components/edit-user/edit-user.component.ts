@@ -34,9 +34,9 @@ export class EditUserComponent implements OnInit {
 
   }
 
-  updateUser() {
+  async updateUser() {
     if (this.user.name === '') return
-    this.userService.updateUserFromStorage(this.user)
+    await this.userService.updateUserFromStorage(this.user)
 
     this.router.navigateByUrl('/user')
   }
